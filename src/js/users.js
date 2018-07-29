@@ -23,6 +23,12 @@ function createVisitorRecord() {
 }
 
 function updateToVisitSelect(event) {
-    var value = event.target.value;
+    let value = event.target.value;
     espacioIf[value]
+
+    for (let i = 0; i < espacioIf[value].length; i++) {
+
+        document.getElementById("toVisit").innerHTML = `<option value="${espacioIf[value][0]}"></option>`
+    }
+
 }
