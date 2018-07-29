@@ -9,7 +9,9 @@
 </head>
 
 <body>
-    <header><h1>Prueba</h1></header>
+    <header>
+        <h1>Prueba</h1>
+    </header>
 
     <form action="" name="visit">
         <input type="text" id="name" placeholder="Ingresa tu nombre...">
@@ -20,13 +22,21 @@
             <option value="retorantDelPato">Restaurant del Pato</option>
             <option value="wiskyFab">Wiskie</option>
             <option value="mustakis">Mustakis</option>
-        </select> 
-        <select name="" id="toVisit">
-            <option value=""></option>
         </select>
+        <select id="toVisit"></select>
     </form>
     <input type="button" onclick="createVisitorRecord()">
 
+    <!-- <div class="camera">
+        <video id="video">Video stream not available.</video>
+        <button id="startbutton">Take photo</button>
+    </div>
+    <video id="video"></video>
+    <button id="startbutton">Take photo</button>
+    <canvas id="canvas"></canvas>
+    <div class="output">
+        <img id="photo" alt="The screen capture will appear in this box.">
+    </div> -->
 
     <!-- firebase links-->
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
@@ -48,6 +58,7 @@
         firebase.initializeApp(config);
     </script>
     <script src="data/dataDePrueba.js"></script>
+    <script src="js/firebase.js"></script>
     <script src="js/initialize.js"></script>
     <script src="./js/users.js"></script>
 
