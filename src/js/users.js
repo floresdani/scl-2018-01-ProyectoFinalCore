@@ -1,18 +1,25 @@
 
 
 function createVisitorRecord() {
-    
-    document.getElementById("name").value = name;
-    document.getElementById("email").value = email;
-    document.getElementById("companyToVisit").value = companyToVisit;
-    document.getElementById("toVisit").value = toVisit;
 
-    return {
-        name : name,
-        email: email,
-        companyToVisit: companyToVisit,
-        toVisit: toVisit,
-    };
+    visitor = {
+        name: "",
+        email: "",
+        companyToVisit: "",
+        toVisit: ""
+    }
+
+    name = document.getElementById("name").value;
+    email = document.getElementById("email").value;
+    companyToVisit = document.getElementById("companyToVisit").value;
+    toVisit = document.getElementById("toVisit").value;
+
+    visitor.name = name;
+    visitor.value = email;
+    visitor.companyToVisit = companyToVisit;
+    visitor.toVisit = toVisit;
+
+    return visitor;
 }
 
 function updateToVisitSelect(event) {
