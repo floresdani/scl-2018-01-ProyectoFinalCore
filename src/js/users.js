@@ -1,5 +1,3 @@
-
-
 let visitor = {
     name: "",
     email: "",
@@ -15,4 +13,9 @@ function visitorRecord() {
     document.getElementById("toVisit").value = visitor.toVisit;
 
     console.log("hola")
+}
+
+function updateToVisitSelect(event) {
+    var value = event.target.value;
+    espacioIf[value]
 }

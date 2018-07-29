@@ -14,7 +14,7 @@
     <form action="" name="visit">
         <input type="text" id="name" placeholder="Ingresa tu nombre...">
         <input type="text" id="email" placeholder="Ingresa tu correo...">
-        <select name="company" id="companyToVisit" onchange="updateToVisitSelect()">
+        <select name="company" id="companyToVisit" onchange="updateToVisitSelect(event)">
             <option value="aguasLab">Aguas Lab</option>
             <option value="laboratoria">Laboratoria</option>
             <option value="retorantDelPato">Restaurant del Pato</option>
@@ -47,6 +47,7 @@
         };
         firebase.initializeApp(config);
     </script>
+    <script src="data/dataDePrueba.js"></script>
     <script src="js/initialize.js"></script>
     <script src="./js/users.js"></script>
 
