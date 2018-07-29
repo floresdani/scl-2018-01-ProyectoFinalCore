@@ -1,19 +1,18 @@
 
-function visitorRecord() {
-    
-    let visitor = {}
 
+function createVisitorRecord() {
+    
     document.getElementById("name").value = name;
     document.getElementById("email").value = email;
     document.getElementById("companyToVisit").value = companyToVisit;
     document.getElementById("toVisit").value = toVisit;
 
-    visitor.push({
+    return {
         name : name,
         email: email,
         companyToVisit: companyToVisit,
         toVisit: toVisit,
-    })
+    };
 }
 
 function updateToVisitSelect(event) {
