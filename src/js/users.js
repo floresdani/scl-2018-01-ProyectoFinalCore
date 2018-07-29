@@ -8,7 +8,7 @@ let visitor = {
 }
 
 function visitorRecord() {
-    
+
     document.getElementById("name").value = visitor.name;
     document.getElementById("email").value = visitor.email;
     document.getElementById("companyToVisit").value = visitor.companyToVisit;

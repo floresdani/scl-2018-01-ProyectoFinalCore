@@ -14,13 +14,16 @@
     <form action="" name="visit">
         <input type="text" id="name" placeholder="Ingresa tu nombre...">
         <input type="text" id="email" placeholder="Ingresa tu correo...">
-        <select name="company" id="companyToVisit">
+        <select name="company" id="companyToVisit" onchange="updateToVisitSelect()">
             <option value="aguasLab">Aguas Lab</option>
             <option value="laboratoria">Laboratoria</option>
             <option value="retorantDelPato">Restaurant del Pato</option>
             <option value="wiskyFab">Wiskie</option>
             <option value="mustakis">Mustakis</option>
         </select> 
+        <select name="" id="toVisit">
+            <option value=""></option>
+        </select>
     </form>
     <input type="button" onclick="visitorRecord()">
 
@@ -45,6 +48,7 @@
         firebase.initializeApp(config);
     </script>
     <script src="js/initialize.js"></script>
+    <script src="./js/users.js"></script>
 
 </body>
 
