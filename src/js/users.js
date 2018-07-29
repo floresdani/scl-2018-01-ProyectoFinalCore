@@ -1,18 +1,19 @@
-let visitor = {
-    name: "",
-    email: "",
-    companyToVisit: "",
-    toVisit: "",
-}
 
 function visitorRecord() {
+    
+    let visitor = {}
 
-    document.getElementById("name").value = visitor.name;
-    document.getElementById("email").value = visitor.email;
-    document.getElementById("companyToVisit").value = visitor.companyToVisit;
-    document.getElementById("toVisit").value = visitor.toVisit;
+    document.getElementById("name").value = name;
+    document.getElementById("email").value = email;
+    document.getElementById("companyToVisit").value = companyToVisit;
+    document.getElementById("toVisit").value = toVisit;
 
-    console.log("hola")
+    visitor.push({
+        name : name,
+        email: email,
+        companyToVisit: companyToVisit,
+        toVisit: toVisit,
+    })
 }
 
 function updateToVisitSelect(event) {
