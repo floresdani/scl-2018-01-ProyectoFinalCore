@@ -7,13 +7,13 @@ firebase.database().ref('visitors')
     .catch(() => {
     });
 
-const getAllVisitors = () => {
+/* const getAllVisitors = () => {
 
 
 }
 
 getAllVisitors();
-
+ */
 firebase.database().ref('visitors')
     .on('child_added', (newVisit) => {
         const visitContainer = document.createElement('div');
