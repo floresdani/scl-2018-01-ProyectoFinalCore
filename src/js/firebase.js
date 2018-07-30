@@ -1,12 +1,14 @@
 
 const saveVisitor = (visitor) => {
-    const newVisitorKey = firebase.database().ref().child('visitors').push().key;//crea uno vacío para obtener la llave
+    const newVisitorKey = firebase.database()
+        .ref().child('visitors')
+        .push().key;//crea uno vacío para obtener la llave
 
     visitor.id = newVisitorKey;
 
-    return firebase.database().ref('visitors/' + newVisitorKey).set(visitor); //set actualiza el valor en esta dirección
-
-    getAllVisitors()
+    return firebase.database()
+        .ref('visitors/' + newVisitorKey)
+        .set(visitor); //set actualiza el valor en esta dirección
 }
 
 //saveVisitor(createVisitorRecord());
