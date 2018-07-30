@@ -12,7 +12,7 @@ function createVisitorRecord() {
     email = document.getElementById("email").value;
     companyToVisit = document.getElementById("companyToVisit").value;
     toVisit = document.getElementById("toVisit").value;
-    reasonToVisit = document.getElementById("rearonToVisit").value;
+    reasonToVisit = document.getElementById("reasonToVisit").value;
 
     visitor.visitName = name;
     visitor.email = email;
