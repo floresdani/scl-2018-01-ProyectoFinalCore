@@ -4,7 +4,7 @@ function createVisitorRecord() {
         visitName: "",
         email: "",
         companyToVisit: "",
-        toVisit: ""
+        toVisit: "",
         reasonToVisit: "",
     }
 
