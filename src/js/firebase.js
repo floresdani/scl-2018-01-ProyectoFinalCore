@@ -5,6 +5,8 @@ const saveVisitor = (visitor) => {
     visitor.id = newVisitorKey;
 
     return firebase.database().ref('visitors/' + newVisitorKey).set(visitor); //set actualiza el valor en esta dirección
+
+    getAllVisitors()
 }
 
 //saveVisitor(createVisitorRecord());

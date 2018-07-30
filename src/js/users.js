@@ -1,5 +1,3 @@
-
-
 function createVisitorRecord() {
 
     visitor = {
@@ -14,7 +12,7 @@ function createVisitorRecord() {
     companyToVisit = document.getElementById("companyToVisit").value;
     toVisit = document.getElementById("toVisit").value;
 
-    visitor.name = name;
+    visitor.visitName = name;
     visitor.email = email;
     visitor.companyToVisit = companyToVisit;
     visitor.toVisit = toVisit;
