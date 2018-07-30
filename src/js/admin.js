@@ -21,8 +21,6 @@ firebase.database().ref('visitors')
         visitContainer.innerHTML += `<div>
                                         <p>Visitante: ${newVisit.val().visitName}</p>
                                         <p>Empresa visitada: ${newVisit.val().companyToVisit}</p>
-                                        <p>Visitó a: ${newVisit.val()}</p>
-                                        <p></p>
-                                        <p></p>
+                                        <p>Visitó a: ${newVisit.val().toVisit}</p>
                                      </div>`
     });
