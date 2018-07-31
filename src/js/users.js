@@ -1,4 +1,6 @@
 function createVisitorRecord() {
+    let time = new Date().getTime();
+    let date = new Date(time).toLocaleString();
 
     visitor = {
         visitName: "",
@@ -6,6 +8,7 @@ function createVisitorRecord() {
         companyToVisit: "",
         toVisit: "",
         reasonToVisit: "",
+        date: date
     }
 
     name = document.getElementById("name").value;
@@ -19,6 +22,7 @@ function createVisitorRecord() {
     visitor.companyToVisit = companyToVisit;
     visitor.toVisit = toVisit;
     visitor.reasonToVisit = reasonToVisit;
+    visitor.date = date;
 
     saveVisitor(visitor);
 
