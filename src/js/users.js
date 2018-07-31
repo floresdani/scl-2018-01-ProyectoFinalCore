@@ -6,6 +6,7 @@ function createVisitorRecord() {
         companyToVisit: "",
         toVisit: "",
         reasonToVisit: "",
+        //foto : ""
     }
 
     name = document.getElementById("name").value;

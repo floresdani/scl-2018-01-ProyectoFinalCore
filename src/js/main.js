@@ -15,10 +15,12 @@ function takePhotoVisit() {
   }
   else alert('Navegador obsoleto');
 
+  let imgData = "";
+
   video.addEventListener('loadedmetadata', function () { canvas.width = video.videoWidth; canvas.height = video.videoHeight; }, false);
   btnPhoto.addEventListener('click', function () {
     canvas.getContext('2d').drawImage(video, 0, 0);
-    var imgData = canvas.toDataURL('image/png');
+    imgData = canvas.toDataURL('image/png');
     img.setAttribute('src', imgData);
   })
 
