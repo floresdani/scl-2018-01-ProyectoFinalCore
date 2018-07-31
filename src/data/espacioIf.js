@@ -1,6 +1,6 @@
 const espacioIf = {
     "aguasLab" : ["juana","marlem","karina","pedro"],
-    "laboratoria" : ["valentina", "jose tomas", "daniela", "alexandra","marcia","fabian","allison","belén"],
+    "laboratoria" : ["valentina", "jose tomas"],
     "retorantDelPato" : ["patricio", "diego"],
     "wiskyFab": ["javier", "anthony"],
     "mustakis": ["pedro", "juan", "diego", "martina", "rebecca", "rosa"],
