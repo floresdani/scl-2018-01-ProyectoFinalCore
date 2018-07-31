@@ -8,16 +8,22 @@ function takePhotoVisit() {
 
   navigator.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
   if (navigator.getUserMedia) {
-    navigator.getUserMedia({ video: true }, function (stream) {
+    navigator.getUserMedia({
+      video: true
+    }, function (stream) {
       video.src = window.URL.createObjectURL(stream);
       video.play();
-    }, function (e) { console.log(e); })
-  }
-  else alert('Navegador obsoleto');
+    }, function (e) {
+      console.log(e);
+    })
+  } else alert('Navegador obsoleto');
 
   let imgData = "";
 
-  video.addEventListener('loadedmetadata', function () { canvas.width = video.videoWidth; canvas.height = video.videoHeight; }, false);
+  video.addEventListener('loadedmetadata', function () {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+  }, false);
   btnPhoto.addEventListener('click', function () {
     canvas.getContext('2d').drawImage(video, 0, 0);
     imgData = canvas.toDataURL('image/png');
@@ -61,6 +67,3 @@ virtualCredential = () => {
   virtualCredential.style.display = "none";
   dashboardAdmin.style.display = "none";
 }
-
-
-
