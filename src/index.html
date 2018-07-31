@@ -34,11 +34,12 @@
             </select>
             <select id="toVisit"></select>
         </form>
-        <input type="button" onclick="createVisitorRecord()">
+        <button onclick="createVisitorRecord()" name="next">siguiente</button>
+        <button type="button" onclick="takePhotoVisit()" name="foto">camara</button>
     </div>
 
     <!-- Sección de tomar foto -->
-    <div id="takePhoto">
+    <div id="takePhoto" class="take-photo">
         <section id="camera">
             <img id="img" src="" alt="">
             <video id="v" src=""></video>
@@ -76,9 +77,8 @@
         };
         firebase.initializeApp(config);
     </script>
-    <script src="data/dataDePrueba.js"></script>
+    <script src="data/espacioIf.js"></script>
     <script src="js/firebase.js"></script>
-    <script src="js/initialize.js"></script>
     <script src="./js/users.js"></script>
     <script src="js/admin.js"></script>
     <script src="js/main.js"></script>
