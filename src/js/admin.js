@@ -17,7 +17,7 @@ getAllVisitors();
 firebase.database().ref('visitors')
     .on('child_added', (newVisit) => {
         const visitContainer = document.createElement('div');
-        admin.appendChild(visitContainer)
+        dashboardAdmin.appendChild(visitContainer)
         visitContainer.innerHTML += `<div>
                                         <p>Visitante: ${newVisit.val().visitName}</p>
                                         <p>Empresa visitada: ${newVisit.val().companyToVisit}</p>

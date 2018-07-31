@@ -1,6 +1,6 @@
 describe('users', () => {
     it('debería ser una funcion', () => {
-        assert.isFunction(visitorRecord);
+        assert.isFunction(createVisitorRecord);
     });
     it('debería ser una función', ()=>{
         assert.isFunction(updateToVisitSelect);
