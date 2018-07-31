@@ -19,7 +19,7 @@
     <!-- navbar -->
     <nav>
         <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Logo</a>
+            <a href="#" class="brand-logo">Logo</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                 <i class="material-icons">menu</i>
             </a>
@@ -39,16 +39,13 @@
 
     <ul class="sidenav" id="mobile-demo">
         <li>
-            <a href="sass.html">Sass</a>
+            <a href="">Inicio</a>
         </li>
         <li>
-            <a href="badges.html">Components</a>
+            <a href="">Registro de Visitas</a>
         </li>
         <li>
-            <a href="collapsible.html">Javascript</a>
-        </li>
-        <li>
-            <a href="mobile.html">Mobile</a>
+            <a href="">Administración</a>
         </li>
     </ul>
 
@@ -83,7 +80,12 @@
             </select>
             <select id="toVisit"></select>
         </form>
-        <input type="button" onclick="createVisitorRecord()">
+        <a class="btn-floating btn-large waves-effect waves-light" onclick="createVisitorRecord()">
+            <i class="material-icons">arrow_forward</i>
+        </a>
+        <i class="material-icons">arrow_forward</i>
+        
+
     </div>
 
     <!-- Sección de tomar foto -->
@@ -127,9 +129,9 @@
         };
         firebase.initializeApp(config);
     </script>
+    <script src="js/material.js"></script>
     <script src="data/dataDePrueba.js"></script>
     <script src="js/firebase.js"></script>
-    <script src="js/initialize.js"></script>
     <script src="./js/users.js"></script>
     <script src="js/admin.js"></script>
     <script src="js/main.js"></script>
