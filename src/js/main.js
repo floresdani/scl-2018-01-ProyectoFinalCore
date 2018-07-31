@@ -1,5 +1,5 @@
 // Función tomar foto 
- window.addEventListener('load', init);
+window.addEventListener('load', init);
   function init() {
     var video = document.querySelector('#v');
     var canvas = document.querySelector('#c');
@@ -22,3 +22,39 @@
      img.setAttribute('src', imgData);
    })
   }
+
+//funciones para activar / desactivar los divs
+intro = () => {
+  intro.style.display = "block"
+  register.style.display = "none";
+  takePhoto.style.display = "none";
+  virtualCredential.style.display = "none";
+  dashboardAdmin.style.display = "none";
+}
+
+btnRegister = () => {
+  intro.style.display = "none"
+  register.style.display = "block";
+  takePhoto.style.display = "none";
+  virtualCredential.style.display = "none";
+  dashboardAdmin.style.display = "none";
+}
+
+btnAdmin = () => {
+  intro.style.display = "none"
+  register.style.display = "none";
+  takePhoto.style.display = "none";
+  virtualCredential.style.display = "none";
+  dashboardAdmin.style.display = "block";
+}
+
+createVisitorRecord = () => {
+  intro.style.display = "block"
+  register.style.display = "none";
+  takePhoto.style.display = "none";
+  virtualCredential.style.display = "none";
+  dashboardAdmin.style.display = "none";
+}
+
+
+
