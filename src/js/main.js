@@ -52,7 +52,7 @@ btnAdmin = () => {
   dashboardAdmin.style.display = "block";
 }
 
-createVisitorRecord = () => {
+virtualCredential = () => {
   intro.style.display = "block"
   register.style.display = "none";
   //takePhoto.style.display = "none";

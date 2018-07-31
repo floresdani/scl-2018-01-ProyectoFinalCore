@@ -62,22 +62,27 @@
     <!-- section registro de visitantes -->
     <div id="register" class="container">
         <form action="" name="visit">
-            <input type="text" id="name" placeholder="Ingresa tu nombre...">
-            <input type="text" id="email" placeholder="Ingresa tu correo...">
+            <input type="text" id="name" placeholder="Ingresa tu nombre">
+            <input type="text" id="email" placeholder="Ingresa tu correo">
+            <input type="text" id="rut" placeholder="Ingresa tu RUT">
+            <input type="text" id="company" placeholder="Compañia">
+            <input type="text" id="patente" placeholder="Patente Vehiculo">
             <select name="company" id="companyToVisit" onchange="updateToVisitSelect(event)">
-                <option value="elEstudio">ELESTUDIO</option>
-                <option value="RoboticsLabs">Robotics Labs</option>
-                <option value="FabricaDeMedios">Fabrica de Medios</option>
-                <option value="aguasLab">Aguas Lab</option>
+                <option value="aguasLab">Aguas Lab</option>      
                 <option value="laboratoria">Laboratoria</option>
                 <option value="retorantDelPato">Restaurant del Pato</option>
                 <option value="wiskyFab">Wiskie</option>
                 <option value="mustakis">Mustakis</option>
+                <option value="elEstudio">ELESTUDIO</option>
+                <option value="RoboticsLabs">Robotics Labs</option>
+                <option value="FabricaDeMedios">Fabrica de Medios</option>
             </select>
             <select id="toVisit"></select>
+            <input type="text" id="reason" placeholder="Motivo de Visita">
         </form>
-        <button onclick="createVisitorRecord()" name="next">siguiente</button>
-        <button type="button" onclick="takePhotoVisit()" name="foto">camara</button>
+        <a class="btn-floating btn-large waves-effect waves-light" onclick="createVisitorRecord()">
+            <i class="material-icons">arrow_forward</i>
+        </a>  
     </div>
 
     <!-- Sección de tomar foto -->
@@ -86,7 +91,9 @@
             <img id="img" src="" alt="">
             <video id="v" src=""></video>
             <canvas id="c"></canvas>
-            <button id="t">Toma una foto</button>
+            <a class="btn-floating btn-large waves-effect waves-light" onclick="takePhotoVisit()">
+                    <i class="material-icons">add_a_photo</i>
+            </a> 
         </section>
     </div>
 
