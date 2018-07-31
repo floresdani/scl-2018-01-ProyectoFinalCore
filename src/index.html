@@ -13,8 +13,8 @@
 <body>
     <!-- section página inicial -->
     <div id="intro">
-        <button onclick="btnRegister()"></button>
-        <button onclick="btnAdmin()"></button>
+        <button onclick="btnRegister()">Registro de Visitas</button>
+        <button onclick="btnAdmin()">Administración</button>
     </div>
     
     <!-- section registro de visitantes -->
@@ -23,7 +23,14 @@
             <input type="text" id="name" placeholder="Ingresa tu nombre...">
             <input type="text" id="email" placeholder="Ingresa tu correo...">
             <select name="company" id="companyToVisit" onchange="updateToVisitSelect(event)">
+                <option value="elEstudio">ELESTUDIO</option>
+                <option value="RoboticsLabs">Robotics Labs</option>
+                <option value="FabricaDeMedios">Aguas Lab</option>
                 <option value="aguasLab">Aguas Lab</option>
+                <option value="aguasLab">Aguas Lab</option>
+                <option value="aguasLab">Aguas Lab</option>
+
+                
                 <option value="laboratoria">Laboratoria</option>
                 <option value="retorantDelPato">Restaurant del Pato</option>
                 <option value="wiskyFab">Wiskie</option>
@@ -45,6 +52,14 @@
     </div>
 
     <!-- section credencial virtual -->
+    <div id="virtualCredential">
+
+    </div>
+
+    <!-- section dashboard admin -->
+    <div id="dashboardAdmin">
+
+    </div>
 
 
     <!-- firebase links-->
