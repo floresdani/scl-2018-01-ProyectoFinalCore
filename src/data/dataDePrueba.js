@@ -3,5 +3,8 @@ const espacioIf = {
     "laboratoria" : ["valentina", "jose tomas", "daniela", "alexandra","marcia","fabian","allison","belén"],
     "retorantDelPato" : ["patricio", "diego"],
     "wiskyFab": ["javier", "anthony"],
-    "mutaski": ["pedro", "juan", "diego", "martina", "rebecca", "rosa"],
+    "mustakis": ["pedro", "juan", "diego", "martina", "rebecca", "rosa"],
+    "FabricaDeMedios": ["pedro", "juan", "diego"],
+    "RoboticsLabs": ["cata","mari","lucy"],
+    "elEstudio": ["cote","miranda","lore","javi"]
 }
