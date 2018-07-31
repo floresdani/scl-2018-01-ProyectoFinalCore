@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- Link de css local -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -26,17 +28,13 @@
         <select id="toVisit"></select>
     </form>
     <input type="button" onclick="createVisitorRecord()">
-
-    <!-- <div class="camera">
-        <video id="video">Video stream not available.</video>
-        <button id="startbutton">Take photo</button>
-    </div>
-    <video id="video"></video>
-    <button id="startbutton">Take photo</button>
-    <canvas id="canvas"></canvas>
-    <div class="output">
-        <img id="photo" alt="The screen capture will appear in this box.">
-    </div> -->
+    <!-- Sección de tomar foto -->
+    <section id="camera">
+        <img id="img" src="" alt="">
+        <video id="v" src=""></video>
+        <canvas id="c"></canvas>
+        <button id="t" onclick="takephoto()">Toma una foto</button>
+    </section>
 
     <!-- firebase links-->
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
@@ -62,6 +60,7 @@
     <script src="js/initialize.js"></script>
     <script src="./js/users.js"></script>
     <script src="js/admin.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
