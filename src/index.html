@@ -6,22 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <!-- Link de css local -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- navbar -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="">Inicio</a>
+                </li>
+                <li>
+                    <a href="">Registro de Visitas</a>
+                </li>
+                <li>
+                    <a href="">Administración</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li>
+            <a href="">Inicio</a>
+        </li>
+        <li>
+            <a href="">Registro de Visitas</a>
+        </li>
+        <li>
+            <a href="">Administración</a>
+        </li>
+    </ul>
+
     <!-- section página inicial -->
-    <div id="intro">
-        <button onclick="btnRegister()">Registro de Visitas</button>
-        <button onclick="btnAdmin()">Administración</button>
+    <div id="intro" class="container">
+        <div>
+            <button onclick="btnRegister()" class="btn-large waves-effect waves-light">Registro de Visitas</button>
+        </div>
+        <div>
+            <button onclick="btnAdmin()" class="btn-large waves-effect waves-light">Administración</button>
+        </div>
     </div>
-    
+
     <!-- section registro de visitantes -->
-    <div id="register">
+    <div id="register" class="container">
         <form action="" name="visit">
             <input type="text" id="name" placeholder="Ingresa tu nombre...">
             <input type="text" id="email" placeholder="Ingresa tu correo...">
+            <input type="text" id="rut" placeholder="Ingresa tu rut...">
+            <input type="text" id="patente" placeholder="Ingresa patente...">
             <select name="company" id="companyToVisit" onchange="updateToVisitSelect(event)">
                 <option value="elEstudio">ELESTUDIO</option>
                 <option value="RoboticsLabs">Robotics Labs</option>
@@ -49,15 +93,17 @@
     </div>
 
     <!-- section credencial virtual -->
-    <div id="virtualCredential">
+    <div id="virtualCredential" class="container">
 
     </div>
 
     <!-- section dashboard admin -->
-    <div id="dashboardAdmin">
+    <div id="dashboardAdmin" class="container">
 
     </div>
 
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 
     <!-- firebase links-->
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
@@ -77,6 +123,8 @@
         };
         firebase.initializeApp(config);
     </script>
+
+    <script src="js/material.js"></script>
     <script src="data/espacioIf.js"></script>
     <script src="js/firebase.js"></script>
     <script src="./js/users.js"></script>
