@@ -15,13 +15,13 @@ function createVisitorRecord() {
     email = document.getElementById("email").value;
     companyToVisit = document.getElementById("companyToVisit").value;
     toVisit = document.getElementById("toVisit").value;
-    reasonToVisit = document.getElementById("reasonToVisit").value;
+    //reasonToVisit = document.getElementById("reasonToVisit").value;
 
     visitor.visitName = name;
     visitor.email = email;
     visitor.companyToVisit = companyToVisit;
     visitor.toVisit = toVisit;
-    visitor.reasonToVisit = reasonToVisit;
+    //visitor.reasonToVisit = reasonToVisit;
     visitor.date = date;
 
     saveVisitor(visitor);
