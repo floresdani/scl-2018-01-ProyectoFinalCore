@@ -86,12 +86,12 @@
     </div>
 
     <!-- Sección de tomar foto -->
-    <div id="takePhoto" class="container">
+    <div id="takePhoto" class="take-photo">
         <section id="camera">
             <img id="img" src="" alt="">
             <video id="v" src=""></video>
             <canvas id="c"></canvas>
-            <a class="btn-floating btn-large waves-effect waves-light" onclick="takephoto()">
+            <a class="btn-floating btn-large waves-effect waves-light" onclick="takePhotoVisit()">
                     <i class="material-icons">add_a_photo</i>
             </a> 
         </section>
@@ -128,8 +128,9 @@
         };
         firebase.initializeApp(config);
     </script>
+
+    <script src="data/espacioIf.js"></script>
     <script src="js/material.js"></script>
-    <script src="data/dataDePrueba.js"></script>
     <script src="js/firebase.js"></script>
     <script src="./js/users.js"></script>
     <script src="js/admin.js"></script>
