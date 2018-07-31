@@ -67,12 +67,8 @@
             <select name="company" id="companyToVisit" onchange="updateToVisitSelect(event)">
                 <option value="elEstudio">ELESTUDIO</option>
                 <option value="RoboticsLabs">Robotics Labs</option>
-                <option value="FabricaDeMedios">Aguas Lab</option>
+                <option value="FabricaDeMedios">Fabrica de Medios</option>
                 <option value="aguasLab">Aguas Lab</option>
-                <option value="aguasLab">Aguas Lab</option>
-                <option value="aguasLab">Aguas Lab</option>
-
-
                 <option value="laboratoria">Laboratoria</option>
                 <option value="retorantDelPato">Restaurant del Pato</option>
                 <option value="wiskyFab">Wiskie</option>
@@ -80,21 +76,17 @@
             </select>
             <select id="toVisit"></select>
         </form>
-        <a class="btn-floating btn-large waves-effect waves-light" onclick="createVisitorRecord()">
-            <i class="material-icons">arrow_forward</i>
-        </a>
-        <i class="material-icons">arrow_forward</i>
-        
-
+        <button onclick="createVisitorRecord()" name="next">siguiente</button>
+        <button type="button" onclick="takePhotoVisit()" name="foto">camara</button>
     </div>
 
     <!-- Sección de tomar foto -->
-    <div id="takePhoto" class="container">
+    <div id="takePhoto" class="take-photo">
         <section id="camera">
             <img id="img" src="" alt="">
             <video id="v" src=""></video>
             <canvas id="c"></canvas>
-            <button id="t" onclick="takephoto()">Toma una foto</button>
+            <button id="t">Toma una foto</button>
         </section>
     </div>
 
@@ -129,8 +121,9 @@
         };
         firebase.initializeApp(config);
     </script>
+
+    <script src="data/espacioIf.js"></script>
     <script src="js/material.js"></script>
-    <script src="data/dataDePrueba.js"></script>
     <script src="js/firebase.js"></script>
     <script src="./js/users.js"></script>
     <script src="js/admin.js"></script>
