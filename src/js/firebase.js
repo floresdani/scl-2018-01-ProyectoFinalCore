@@ -12,7 +12,18 @@ const saveVisitor = (visitor) => {
 }
 
 //saveVisitor(createVisitorRecord());
-
+firebase.database().ref('visitors')
+    .on('child_added', (newVisit) => {
+        const visitContainer = document.createElement('div');
+        dashboardAdmin.appendChild(visitContainer)
+        visitContainer.innerHTML += `<div>
+                                        <p>Visitante: ${newVisit.val().visitName}</p>
+                                        <p>Rut:${newVisit.val().rut}</p>
+                                        <p>Email:${newVisit.val().email}</p>
+                                        <p>Empresa visitada: ${newVisit.val().companyToVisit}</p>
+                                        <p>Visitó a: ${newVisit.val().toVisit}</p>
+                                     </div>`
+    });
 
 /*firebase es una colección donde meto más colecciones, como las carpetas y directorias
 objeto<id... me pongo en el directorio y creo un fichero vacío poniendo un id... Y la guarda en tal var

@@ -8,21 +8,29 @@ function createVisitorRecord() {
         companyToVisit: "",
         toVisit: "",
         reasonToVisit: "",
-        date: date
+        rut: "",
+        //foto: ,
+        date: date,
+        patente: ""
     }
 
     name = document.getElementById("name").value;
     email = document.getElementById("email").value;
     companyToVisit = document.getElementById("companyToVisit").value;
     toVisit = document.getElementById("toVisit").value;
-    reasonToVisit = document.getElementById("reasonToVisit").value;
+
+    rut = document.getElementById("rut").value;
+    patente = document.getElementById("patente").value;
+
 
     visitor.visitName = name;
     visitor.email = email;
     visitor.companyToVisit = companyToVisit;
     visitor.toVisit = toVisit;
-    visitor.reasonToVisit = reasonToVisit;
+    //visitor.reasonToVisit = reasonToVisit;
     visitor.date = date;
+    visitor.rut = rut;
+    visitor.patente = patente;
 
     saveVisitor(visitor);
 
