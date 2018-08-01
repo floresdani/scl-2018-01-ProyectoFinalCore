@@ -2,148 +2,163 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RegistroOK</title>
 
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <!-- Link de css local -->
-    <link rel="stylesheet" href="css/style.css">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <!-- Link de css local -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- navbar -->
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Logo</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <li>
-                    <a href="">Inicio</a>
-                </li>
-                <li>
-                    <a href="">Registro de Visitas</a>
-                </li>
-                <li>
-                    <a href="">Administración</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <ul class="sidenav" id="mobile-demo">
+  <!-- navbar -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">RegistroOK</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
         <li>
-            <a href="">Inicio</a>
+          <a href="#" onclick="btnIntro()">Inicio</a>
         </li>
         <li>
-            <a href="">Registro de Visitas</a>
+          <a href="#" onclick="btnRegister()">Registro de Visitas</a>
         </li>
         <li>
-            <a href="">Administración</a>
+          <a href="#" onclick="btnAdmin()">Administración</a>
         </li>
-    </ul>
-
-    <!-- section página inicial -->
-    <div id="intro" class="container">
-        <div>
-            <button onclick="btnRegister()" class="btn-large waves-effect waves-light">Registro de Visitas</button>
-        </div>
-        <div>
-            <button onclick="btnAdmin()" class="btn-large waves-effect waves-light">Administración</button>
-        </div>
+      </ul>
     </div>
+  </nav>
 
-    <!-- section registro de visitantes -->
-    <div id="register" class="container">
-        <form action="" name="visit">
+  <ul class="sidenav" id="mobile-demo">
+    <li>
+      <a href="#" onclick="btnIntro()">Inicio</a>
+    </li>
+    <li>
+      <a href="#" onclick="btnRegister()">Registro de Visitas</a>
+    </li>
+    <li>
+      <a href="#" onclick="btnAdmin()">Administración</a>
+    </li>
+  </ul>
 
-            <input type="text" id="name" placeholder="Ingresa tu nombre..." v-model="from_name">
-            <input type="text" id="email" placeholder="Ingresa tu correo...">
-            <input type="text" id="rut" placeholder="Ingresa tu RUT...">
-          <input type="text" id="company" placeholder="Compañia">
-            <input type="text" id="patente" placeholder="Patente Vehiculo...">
+  <!-- section página inicial -->
+  <div id="intro" class="container">
+    <img src="img/ifblanco-200x143.png" alt="logoIF">
+    <div>
+      <button onclick="btnRegister()" class="btn-large waves-effect waves-light">Registro de Visitas</button>
+    </div>
+    <div>
+      <button onclick="btnAdmin()" class="btn-large waves-effect waves-light">Administración</button>
+    </div>
+  </div>
 
-            
-            <select name="company" id="companyToVisit" onchange="updateToVisitSelect(event)">
-                <option value="aguasLab">Aguas Lab</option>
-                <option value="laboratoria">Laboratoria</option>
-                <option value="retorantDelPato">Restaurant del Pato</option>
-                <option value="wiskyFab">Wiskie</option>
-                <option value="mustakis">Mustakis</option>
-                <option value="elEstudio">ELESTUDIO</option>
-                <option value="RoboticsLabs">Robotics Labs</option>
-                <option value="FabricaDeMedios">Fabrica de Medios</option>
-            </select>
-            <select id="toVisit"></select>
-            <input type="text" id="reason" placeholder="Motivo de Visita">
-        </form>
-        <a class="btn-floating btn-large waves-effect waves-light" onclick="createVisitorRecord()">
-            <i class="material-icons">arrow_forward</i>
+  <!-- section registro de visitantes 1 -->
+  <div id="register" class="container">
+    <form action="" name="visit">
+      <input type="text" id="name" placeholder="Ingresa tu nombre..." v-model="from_name">
+      <input type="text" id="email" placeholder="Ingresa tu correo...">
+      <input type="text" id="rut" placeholder="Ingresa tu RUT...">
+      <input type="text" id="company" placeholder="Compañia">
+    </form>
+    <a class="btn-floating btn-large waves-effect waves-light" onclick="nextRegister()">
+      <i class="material-icons">arrow_forward</i>
+    </a>
+  </div>
+
+  <!-- section registro de visitantes 2 -->
+  <div id="register2" class="container">
+    <form action="" name="visit2">
+      <input type="text" id="patente" placeholder="Patente Vehiculo...">
+      <select name="company" id="companyToVisit" onchange="updateToVisitSelect(event)">
+        <option value="aguasLab">Aguas Lab</option>
+        <option value="laboratoria">Laboratoria</option>
+        <option value="retorantDelPato">Restaurant del Pato</option>
+        <option value="wiskyFab">Wiskie</option>
+        <option value="mustakis">Mustakis</option>
+        <option value="elEstudio">ELESTUDIO</option>
+        <option value="RoboticsLabs">Robotics Labs</option>
+        <option value="FabricaDeMedios">Fabrica de Medios</option>
+      </select>
+      <select id="toVisit"></select>
+      <input type="text" id="reason" placeholder="Motivo de Visita">
+    </form>
+    <a class="btn-floating btn-large waves-effect waves-light" onclick="createVisitorRecord()">
+      <i class="material-icons">arrow_forward</i>
+    </a>
+  </div>
+
+  <!-- Sección de tomar foto -->
+  <div id="takePhoto" class="take-photo container">
+    <section id="camera">
+      <img id="img" src="" alt="">
+      <video id="v" src=""></video>
+      <canvas id="c"></canvas>
+      <a class="btn-floating btn-large waves-effect waves-light" onclick="takePhotoVisit()">
+        <i class="material-icons">add_a_photo</i>
+      </a>
+      <a class="btn-floating btn-large waves-effect waves-light" onclick="savePhoto()">
+          <i class="material-icons">arrow_forward</i>
         </a>
-    </div>
+    </section>
+  </div>
 
-    <!-- Sección de tomar foto -->
-    <div id="takePhoto" class="take-photo">
-        <section id="camera">
-            <img id="img" src="" alt="">
-            <video id="v" src=""></video>
-            <canvas id="c"></canvas>
-            <a class="btn-floating btn-large waves-effect waves-light" onclick="takePhotoVisit()">
-                <i class="material-icons">add_a_photo</i>
-            </a>
-        </section>
-    </div>
+  <!-- section credencial virtual -->
+  <div id="virtualCredential" class="container">
 
-    <!-- section credencial virtual -->
-    <div id="virtualCredential" class="container">
+    <a class="btn-floating btn-large waves-effect waves-light" onclick="registerOk()">
+      <i class="material-icons">arrow_forward</i>
+    </a>
+  </div>
 
-    </div>
+  <!-- section dashboard admin -->
+  <div id="dashboardAdmin" class="container">
 
-    <!-- section dashboard admin -->
-    <div id="dashboardAdmin" class="container">
+  </div>
 
-    </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <!-- firebase links-->
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
 
-    <!-- firebase links-->
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <!-- Initialize Firebase -->
+  <script>
+    var config = {
+      apiKey: "AIzaSyDE-SC7XhtmgVdJ0zwXpZ6K2lcClFvDUtc",
+      authDomain: "final-core.firebaseapp.com",
+      databaseURL: "https://final-core.firebaseio.com",
+      projectId: "final-core",
+      storageBucket: "final-core.appspot.com",
+      messagingSenderId: "715882210352"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <!-- emailjs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js">
+  </script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript">
+  </script>
 
-    <!-- Initialize Firebase -->
-    <script>
-        var config = {
-            apiKey: "AIzaSyDE-SC7XhtmgVdJ0zwXpZ6K2lcClFvDUtc",
-            authDomain: "final-core.firebaseapp.com",
-            databaseURL: "https://final-core.firebaseio.com",
-            projectId: "final-core",
-            storageBucket: "final-core.appspot.com",
-            messagingSenderId: "715882210352"
-        };
-        firebase.initializeApp(config);
-    </script>
-    <!-- emailjs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js">
-    </script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript">
-    </script>
+  <script src="js/material.js"></script>
+  <script src="data/espacioIf.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="./js/users.js"></script>
+  <script src="data/espacioIf.js"></script>
 
-    <script src="js/material.js"></script>
-     <script src="js/firebase.js"></script>
-    <script src="./js/users.js"></script>
-    <script src="data/espacioIf.js"></script>
-    <script src="js/admin.js"></script>
-    <script src="js/notification.js"></script>
-    <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/notification.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 
