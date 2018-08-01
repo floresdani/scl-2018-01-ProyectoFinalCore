@@ -1,9 +1,11 @@
-firebase.database().ref('visitors')
+  firebase.database().ref('visitors')
   .once('value')
   .then((allVisitors) => {
-    JSON.stringify(allVisitors);
+      JSON.stringify(allVisitors);
   })
-  .catch(() => {});
+  .catch(() => {
+  });
+
 
 /* const getAllVisitors = () => {
 
