@@ -25,13 +25,13 @@
       </a>
       <ul class="right hide-on-med-and-down">
         <li>
-          <a href="">Inicio</a>
+          <a href="" onclick="btnIntro()">Inicio</a>
         </li>
         <li>
-          <a href="">Registro de Visitas</a>
+          <a href="" onclick="btnRegister()">Registro de Visitas</a>
         </li>
         <li>
-          <a href="">Administración</a>
+          <a href="" onclick="btnAdmin()">Administración</a>
         </li>
       </ul>
     </div>
@@ -39,13 +39,13 @@
 
   <ul class="sidenav" id="mobile-demo">
     <li>
-      <a href="">Inicio</a>
+      <a href="" onclick="btnIntro()">Inicio</a>
     </li>
     <li>
-      <a href="">Registro de Visitas</a>
+      <a href="" onclick="btnRegister()">Registro de Visitas</a>
     </li>
     <li>
-      <a href="">Administración</a>
+      <a href="" onclick="btnAdmin()">Administración</a>
     </li>
   </ul>
 
@@ -59,17 +59,23 @@
     </div>
   </div>
 
-  <!-- section registro de visitantes -->
+  <!-- section registro de visitantes 1 -->
   <div id="register" class="container">
     <form action="" name="visit">
-
       <input type="text" id="name" placeholder="Ingresa tu nombre..." v-model="from_name">
       <input type="text" id="email" placeholder="Ingresa tu correo...">
       <input type="text" id="rut" placeholder="Ingresa tu RUT...">
       <input type="text" id="company" placeholder="Compañia">
+    </form>
+    <a class="btn-floating btn-large waves-effect waves-light" onclick="nextRegister()">
+      <i class="material-icons">arrow_forward</i>
+    </a>
+  </div>
+
+  <!-- section registro de visitantes 2 -->
+  <div id="register2" class="container">
+    <form action="" name="visit2">
       <input type="text" id="patente" placeholder="Patente Vehiculo...">
-
-
       <select name="company" id="companyToVisit" onchange="updateToVisitSelect(event)">
         <option value="aguasLab">Aguas Lab</option>
         <option value="laboratoria">Laboratoria</option>
@@ -89,7 +95,7 @@
   </div>
 
   <!-- Sección de tomar foto -->
-  <div id="takePhoto" class="take-photo">
+  <div id="takePhoto" class="take-photo container">
     <section id="camera">
       <img id="img" src="" alt="">
       <video id="v" src=""></video>
@@ -97,12 +103,18 @@
       <a class="btn-floating btn-large waves-effect waves-light" onclick="takePhotoVisit()">
         <i class="material-icons">add_a_photo</i>
       </a>
+      <a class="btn-floating btn-large waves-effect waves-light" onclick="savePhoto()">
+          <i class="material-icons">arrow_forward</i>
+        </a>
     </section>
   </div>
 
   <!-- section credencial virtual -->
   <div id="virtualCredential" class="container">
 
+    <a class="btn-floating btn-large waves-effect waves-light" onclick="registerOk()">
+      <i class="material-icons">arrow_forward</i>
+    </a>
   </div>
 
   <!-- section dashboard admin -->

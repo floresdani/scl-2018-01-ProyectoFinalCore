@@ -36,9 +36,10 @@ function takePhotoVisit() {
 
 
 //funciones para activar / desactivar los divs
-intro = () => {
+btnIntro = () => {
   intro.style.display = "block"
   register.style.display = "none";
+  register2.style.display = "none";
   takePhoto.style.display = "none";
   virtualCredential.style.display = "none";
   dashboardAdmin.style.display = "none";
@@ -47,6 +48,7 @@ intro = () => {
 btnRegister = () => {
   intro.style.display = "none"
   register.style.display = "block";
+  register2.style.display = "none";
   takePhoto.style.display = "none";
   virtualCredential.style.display = "none";
   dashboardAdmin.style.display = "none";
@@ -55,14 +57,43 @@ btnRegister = () => {
 btnAdmin = () => {
   intro.style.display = "none"
   register.style.display = "none";
+  register2.style.display = "none";
   takePhoto.style.display = "none";
   virtualCredential.style.display = "none";
   dashboardAdmin.style.display = "block";
 }
 
-virtualCredential = () => {
-  intro.style.display = "block"
+nextRegister = () => {
+  intro.style.display = "none"
   register.style.display = "none";
+  register2.style.display = "block";
+  takePhoto.style.display = "none";
+  virtualCredential.style.display = "none";
+  dashboardAdmin.style.display = "none";
+}
+
+createVisitorRecord = () => {
+  intro.style.display = "none"
+  register.style.display = "none";
+  register2.style.display = "none";
+  takePhoto.style.display = "block";
+  virtualCredential.style.display = "none";
+  dashboardAdmin.style.display = "none";
+}
+
+savePhoto = () => {
+  intro.style.display = "none"
+  register.style.display = "none";
+  register2.style.display = "none";
+  takePhoto.style.display = "none";
+  virtualCredential.style.display = "block";
+  dashboardAdmin.style.display = "none";
+}
+
+registerOk = () => {
+  intro.style.display = "none"
+  register.style.display = "block";
+  register2.style.display = "none";
   takePhoto.style.display = "none";
   virtualCredential.style.display = "none";
   dashboardAdmin.style.display = "none";
