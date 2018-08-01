@@ -1,0 +1,45 @@
+#c {
+  display: none;
+}
+
+/* display del html */
+#intro {
+  display: block;
+}
+
+#register {
+  display: none;
+}
+
+#register2 {
+  display: none;
+}
+
+#takePhoto {
+  display: none;
+}
+
+#virtualCredential {
+  display: none;
+}
+
+#dashboardAdmin {
+  display: none;
+}
+
+body {
+  text-align: center;
+}
+
+.nav-wrapper {
+  background-color: black;
+}
+
+.btn-large {
+  background-color: #F3BF05;
+  margin: 20px;
+}
+
+img {
+  margin: 50px;
+}
