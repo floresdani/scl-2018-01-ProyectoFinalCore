@@ -37,4 +37,9 @@ body {
 
 .btn-large {
   background-color: #F3BF05;
+  margin: 20px;
+}
+
+img {
+  margin: 50px;
 }
