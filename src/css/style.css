@@ -8,21 +8,38 @@
 }
 
 #register {
-  display: block;
+  display: none;
+}
+
+#register2 {
+  display: none;
 }
 
 #takePhoto {
-  display: block;
+  display: none;
 }
 
 #virtualCredential {
-  display: block;
+  display: none;
 }
 
 #dashboardAdmin {
-  display: block;
+  display: none;
 }
 
 body {
   text-align: center;
+}
+
+.nav-wrapper {
+  background-color: black;
+}
+
+.btn-large {
+  background-color: #F3BF05;
+  margin: 20px;
+}
+
+img {
+  margin: 50px;
 }
